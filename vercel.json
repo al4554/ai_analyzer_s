@@ -7,13 +7,13 @@
     },
     {
       "source": "/(.*)",
-      "destination": "/frontend/$1"
+      "destination": "/frontend/dist/$1"
     }
   ],
   "redirects": [
     {
       "source": "/",
-      "destination": "/frontend/index.html",
+      "destination": "/frontend/dist/index.html",
       "permanent": false
     }
   ]
