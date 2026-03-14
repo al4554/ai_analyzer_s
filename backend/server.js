@@ -11,8 +11,9 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-// In serverless, we might be mounting this app under /api
+// Support both local (`/api/...`) and serverless rewritten (`/...`) paths.
 app.use('/api', resumeRoutes);
+app.use('/', resumeRoutes);
 
 // Database connection is usually handled per-request in serverless 
 // but we can call it here or in the entry point.
